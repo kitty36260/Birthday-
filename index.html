@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{margin:0;background:#ff69b4;color:#fff;font-family:sans-serif;text-align:center}
+.box{padding:40px}
+button{padding:12px 20px;border:none;border-radius:30px;background:#fff;color:#ff1493;font-size:18px}
+#cake{display:none;font-size:90px}
+#msg{display:none;font-size:28px}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>🎁 Secret Birthday</h1>
+<input id="code" placeholder="Enter Code">
+<br><br>
+<button onclick="go()">Open</button>
+<div id="cake">🎂</div>
+<h2 id="msg">🎉 Happy Birthday! 🎈</h2>
+</div>
+<script>
+function go(){
+if(document.getElementById('code').value=="786"){
+document.getElementById('cake').style.display="block";
+setTimeout(()=>{document.getElementById('msg').style.display="block"},1500);
+}else{alert("Wrong Code")}
+}
+</script>
+</body>
+</html>
